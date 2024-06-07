@@ -30,9 +30,17 @@
                     </nav>
                 </div>
                 <div class="column header third">
-                    <button class="header signup_btn">signup</button>
-                    <button class="header login_btn">login</button>
+                    <button class="header signup_btn" onclick="pushToSignup()">signup</button>
+                    <button class="header login_btn" onclick="pushToLogin()">login</button>
                 </div>
+                <script>
+                    function pushToSignup() {
+                        window.location.href = "signup.html";
+                    }
+                    function pushToLogin() {
+                        window.location.href = "login.html";
+                    }
+                </script>
             </div>
         </div>
     </header>

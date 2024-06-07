@@ -1,0 +1,17 @@
+.container.main.modal {
+    width: 500px;
+    height: 500px;
+    background-color: #010409;
+}
+.row.main.header {
+    padding: 10px;
+    background-color: #949ca69f;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.main_header_brand {
+    color: white;
+    margin: 0;
+}
