@@ -4,10 +4,10 @@ this is just a template for my web design so i can get a default layout.
 
 this design includes a responsive layout of the following
 
--- no icons
--- all made in css and html
--- very small amounts of reactive js
--- simple yet complex format
+-- no icons <br>
+-- all made in css and html <br>
+-- very small amounts of reactive js <br>
+-- simple yet complex format <br>
 -- readable
 
 definetly a good starter and basic demo of how websites should be formatted
