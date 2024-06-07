@@ -10,4 +10,5 @@ this design includes a responsive layout of the following
 -- simple yet complex format <br>
 -- readable
 
+<h2>more info</h2>
 definetly a good starter and basic demo of how websites should be formatted
