@@ -49,6 +49,47 @@
             transform: scale(1.02);
         }
     </style>
+    <style>
+        .container.footer.below {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top:40px;
+        }
+        .row.footer.service {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .column.main.one,
+        .column.main.two,
+        .column.main.three {
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid white;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .column.main.one:hover,
+        .column.main.two:hover,
+        .column.main.three:hover {
+            background-color: rgba(241, 241, 241, 0.083);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1); 
+        }
+        
+        .service_brand {
+            margin: 0;
+            color: white;
+            font-size: 40px;
+        }
+        .service_desc {
+            color: rgb(191, 191, 191);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -97,16 +138,19 @@
                 </div>
             </div>
         </div>
-        <div class="container main below">
-            <div class="row main service">
+        <div class="container footer below">
+            <div class="row footer service">
                 <div class="column main one">
                     <h4 class="service_brand">service 1</h4>
+                    <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quo accusantium provident maxime impedit veritatis, culpa dolor quaerat molestias, magnam repellat quasi iste perferendis omnis illo qui perspiciatis.</p>
                 </div>
                 <div class="column main two">
-                    <h4 class="service_brand">service 1</h4>
+                    <h4 class="service_brand">service 2</h4>
+                    <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quo accusantium provident maxime impedit veritatis, culpa dolor quaerat molestias.</p>
                 </div>
                 <div class="column main three">
-                    <h4 class="service_brand">service 1</h4>
+                    <h4 class="service_brand">service 3</h4>
+                    <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quo accusantium provident maxime impedit veritatis, culpa dolor quaerat molestias, magnam repellat quasi iste.</p>
                 </div>
             </div>
         </div>

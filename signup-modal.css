@@ -1,7 +1,9 @@
 .container.main.modal {
     width: 500px;
-    height: 360px;
+    height: 520px;
     background-color: #010409;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .row.main.header {
     padding: 10px;
