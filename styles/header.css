@@ -13,8 +13,17 @@
     justify-content: space-between;
 }
 .website_brand_header {
-    color: white;
+    background: linear-gradient(to left, rgb(38, 38, 185), rgb(21, 21, 68), rgb(16, 28, 69), rgb(41, 41, 197));
+    background-clip: text;
+    color: transparent;
+    animation: animatedbrand 5s linear infinite;
     font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+}
+@keyframes animatedbrand {
+    to {background-position-x: 250px;}
 }
 .column.header.second {
     display: flex;
