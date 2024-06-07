@@ -27,21 +27,44 @@
                     <h1 class="main_header_brand">login</h1>
                 </div>
                 <div class="column main escape">
-                    <ul class="escape_btn_container">
+                    <ul class="escape_btn_container" onclick="pushToHome()">
                         <li class="escape_btn top"></li>
                         <li class="escape_btn bottom"></li>
                     </ul>
                 </div>
+                <script>
+                    function pushToHome() {
+                        window.location.href = "index.html";
+                    }
+                </script>
             </div>
             <div class="row main body">
                 <div class="column main input name">
+                    <h4 class="pre-input-placeholder full_name_brand">First Name</h4>
                     <input type="text" placeholder="name" name="name">
                 </div>
-                <div class="colum main input password">
-                    <input type="text" placeholder="password" name="password">
+                <div class="column main input name">
+                    <h4 class="pre-input-placeholder full_name_brand">Last Name</h4>
+                    <input type="text" placeholder="name" name="name">
                 </div>
                 <div class="column main input email">
+                    <h4 class="pre-input-placeholder email_brand">Email</h4>
                     <input type="text" placeholder="email" name="email">
+                </div>
+                <div class="colum main input password">
+                    <h4 class="pre-input-placeholder password_brand">Password</h4>
+                    <input type="password" placeholder="password" name="password">
+                </div>
+                <div class="column main input submit">
+                    <input name="subnit" type="submit">
+                </div>
+            </div>
+            <div class="row main footer">
+                <div class="column main desc">
+                    <a class="forgot_password">forgot password?</a>
+                </div>
+                <div class="colum main desc second">
+                    <a href="signup.html" class="signup_push">dont't have an account?</a>
                 </div>
             </div>
         </div>
