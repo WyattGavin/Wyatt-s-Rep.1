@@ -1,0 +1,79 @@
+.container.main.modal {
+    width: 500px;
+    height: 360px;
+    background-color: #010409;
+}
+.row.main.header {
+    padding: 10px;
+    background-color: #949ca69f;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.main_header_brand {
+    color: white;
+    margin: 0;
+}
+.row.main.body {
+    padding: 20px;
+}
+.pre-input-placeholder {
+    color: white;
+    margin: 0px 0px 10px 0px;
+    font-size: 22px;
+}
+.input input[type="text"],
+.input input[type="password"] {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0d1117;
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.input input[type="text"]::placeholder,
+.input input[type="password"]::placeholder {
+    color: #aaaaaa;
+}
+.input input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    margin-top: 10px;
+}
+.input input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: black;
+}
+.row.main.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 10px 10px;
+    margin: 0px 8px 0px 8px;
+}
+.forgot_password,
+.signup_push {
+    color: white;
+    margin: 0px 0px 0px 0px;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid rgba(128, 128, 128, 0);
+    text-decoration: none;
+    border-radius: 5px
+}
+.forgot_password:hover,
+.signup_push:hover {
+    border: 1px solid rgb(128, 128, 128);
+    cursor: pointer;
+}
