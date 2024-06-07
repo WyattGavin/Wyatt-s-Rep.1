@@ -11,6 +11,43 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: #0d1117;
         }
+        main {
+            padding: 20px;
+        }
+    </style>
+    <style>
+        .container.main {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .row.main.one {
+            width: 800px;
+        }
+        .row.main.two {
+            width: 800px;
+            display: flex;
+            justify-content: center;
+        }
+        .main_brand {
+            font-size: 76px;
+            color: white;
+            margin: 0;
+        }
+        .main_desc {
+            margin: 0;
+            font-size: 24px;
+            color: rgb(206, 206, 206);
+        }
+        .main_img {
+            width: 700px;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+        .main_img:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body>
@@ -46,9 +83,30 @@
     </header>
     <main>
         <div class="container main">
-            <div class="row main">
-                <div class="column main">
-
+            <div class="row main one">
+                <div class="column main brand">
+                    <h2 class="main_brand">Welcome to your Website</h2>
+                </div>
+                <div class="column main desc">
+                    <p class="main_desc">this is where you put your description <br> you can put whatever you want here</p>
+                </div>
+            </div>
+            <div class="row main two">
+                <div class="column main img">
+                    <img class="main_img" src="main.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container main below">
+            <div class="row main service">
+                <div class="column main one">
+                    <h4 class="service_brand">service 1</h4>
+                </div>
+                <div class="column main two">
+                    <h4 class="service_brand">service 1</h4>
+                </div>
+                <div class="column main three">
+                    <h4 class="service_brand">service 1</h4>
                 </div>
             </div>
         </div>
