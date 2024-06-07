@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main-intro.css">
     <link rel="stylesheet" href="/styles/services.css">
+    <link rel="stylesheet" href="/media/iphone-style.css">
+    <link rel="stylesheet" href="/styles/hamburger-modal.css">
+    <link rel="stylesheet" href="/styles/escape-btn.css">
+    <script src="/js/hamburger-modal.js"></script>
     <style>
         body {
             margin: 0;
@@ -37,50 +41,48 @@
                 <div class="column header third">
                     <button class="header signup_btn" onclick="pushToSignup()">signup</button>
                     <button class="header login_btn" onclick="pushToLogin()">login</button>
+                    <ul class="un-ordered_hamburger-list" id="hamburger-menu-btn">
+                        <li class="hamburger"></li>
+                        <li class="hamburger"></li>
+                        <li class="hamburger"></li>
+                    </ul>
                 </div>
                 <script>
                     function pushToSignup() {
-                        window.location.href = "signup.html";
+                        window.location.href = "/html/signup.html";
                     }
                     function pushToLogin() {
-                        window.location.href = "login.html";
+                        window.location.href = "/html/login.html";
                     }
                 </script>
             </div>
         </div>
     </header>
     <main>
-        <div class="container main">
-            <div class="row main one">
-                <div class="column main brand">
-                    <h2 class="main_brand">Welcome to your Website</h2>
-                </div>
-                <div class="column main desc">
-                    <p class="main_desc">this is where you put your description <br> you can put whatever you want here</p>
-                </div>
-            </div>
-            <div class="row main two">
-                <div class="column main img">
-                    <img class="main_img" src="/imgs/main.webp" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="container footer below">
-            <div class="row footer service">
-                <div class="column main one">
-                    <h4 class="service_brand">service 1</h4>
-                    <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quo accusantium provident maxime impedit veritatis, culpa dolor quaerat molestias, magnam repellat quasi iste perferendis omnis illo qui perspiciatis.</p>
-                </div>
-                <div class="column main two">
-                    <h4 class="service_brand">service 2</h4>
-                    <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quo accusantium provident maxime impedit veritatis, culpa dolor quaerat molestias.</p>
-                </div>
-                <div class="column main three">
-                    <h4 class="service_brand">service 3</h4>
-                    <p class="service_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quo accusantium provident maxime impedit veritatis, culpa dolor quaerat molestias, magnam repellat quasi iste.</p>
-                </div>
-            </div>
-        </div>
     </main>
+    <div class="hamburger-modal" id="hamburger-modal">
+        <div class="hamburger-modal-content">
+            <div class="row hamburger-modal-header">
+                <div class="column hamburger-modal-header-exit">
+                    <h3 class="hamburger-modal-brand-content">MENU</h3>
+                </div>
+                <div class="column hamburger-modal-header-exit">
+                    <ul class="escape_btn_container" onclick="onExitMenuClick()">
+                        <li class="escape_btn top"></li>
+                        <li class="escape_btn bottom"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row hamburger-modal-main">
+                <div class="column hamburger-modal-list">
+                    <a href="#">Products</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="/html/login.html">Login</a>
+                    <a href="/html/signup.html">signup</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

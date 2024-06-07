@@ -1,0 +1,59 @@
+.hamburger-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 250, 250, 0);
+    z-index: 999;
+    backdrop-filter: blur(3px);
+}
+.hamburger-modal-content {
+    width: 100%;
+}
+.row.hamburger-modal-header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.hamburger-modal-brand-content {
+    margin: 0px;
+    padding: 0;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    color: rgb(255, 255, 255);
+}
+.column.hamburger-modal-header-exit .escape_btn{
+    width: 45px;
+    border-radius: 5px;
+    height: 6px;
+}
+.hamburger-modal-list {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hamburger-modal-content a {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.hamburger-modal-content a:hover {
+    background-color: rgba(128, 128, 128, 0.116);
+}
+.show-modal {
+    display: flex;
+}
