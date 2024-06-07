@@ -13,6 +13,7 @@
 }
 .website_brand_header {
     color: white;
+    font-size: 40px;
 }
 .column.header {
     width: 500px;
@@ -29,19 +30,31 @@
     display: flex;
     list-style: none;
     padding: 0;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+.list-items:hover {
+    transform: scale(1.05);
 }
 .list-item {
-    margin: 0px 30px 0px 30px;
-    padding: 5px 10px 5px 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    font-size: 18px;
+    margin: 0px 50px 0px 50px; 
+    font-size: 24px;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px; 
+    transition: all 0.3s ease; 
 }
+
 .list-item:hover {
-    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.08); 
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1); 
+}
+
+.list-item-scale:hover {
+    transform: scale(1.1);
 }
 .header.signup_btn,
 .header.login_btn {
@@ -50,7 +63,7 @@
     border-radius: 5px;
     color: white;
     padding: 5px 10px 5px 10px;
-    font-size: 18px;
+    font-size: 24px;
 }
 .header.signup_btn:hover,
 .header.login_btn:hover {
