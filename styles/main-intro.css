@@ -1,0 +1,32 @@
+.container.main {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.row.main.one {
+    width: 800px;
+}
+.row.main.two {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+.main_brand {
+    font-size: 76px;
+    color: white;
+    margin: 0;
+}
+.main_desc {
+    margin: 0;
+    font-size: 24px;
+    color: rgb(206, 206, 206);
+}
+.main_img {
+    width: 700px;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+.main_img:hover {
+    transform: scale(1.02);
+}
