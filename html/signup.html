@@ -16,7 +16,10 @@
         main {
             display: flex;
             justify-content: center;
-            margin-top: 12.5%;
+            margin-top: 10%;
+        }
+        #error_reg {
+            color: red;
         }
     </style>
 </head>
@@ -39,7 +42,7 @@
                     }
                 </script>
             </div>
-            <div class="row main body">
+            <form class="row main body" id="signupForm">
                 <div class="column main input name">
                     <h4 class="pre-input-placeholder full_name_brand">First Name</h4>
                     <input id="firstname_input" type="text" placeholder="First Name" name="firstname">
@@ -68,10 +71,11 @@
                         togglePasswordIcon.textContent = type === 'password' ? 'visibility_off' : 'visibility';
                     }            
                 </script>
+                <p style="margin: 0; font-size: 10px;" id="error_reg"></p>
                 <div class="column main input submit">
                     <input name="submit" type="submit">
                 </div>
-            </div>
+            </form>
             <div class="row main footer">
                 <div class="colum main desc second">
                     <a href="login.html" class="signup_push">already have an account?</a>
@@ -81,5 +85,5 @@
     </main>
 </body>
 <script src="/js/signup/input-color-functionality-signup.js"></script>
-
+<script type="module" src="/js/signup/signup-firebase.js"></script>
 </html>

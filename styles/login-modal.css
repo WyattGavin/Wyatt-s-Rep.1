@@ -46,26 +46,26 @@
 .input input[type="password"]:focus::placeholder {
     font-size: 13px;
 }
-
+input:focus {
+    outline: none;
+}
 .input input[type="submit"] {
     width: 25%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: transparent;
-    color: #000000;
+    background-color: #007BFF;
+    color: #ffffff;
     font-size: 16px;
     cursor: pointer;
     box-sizing: border-box;
     border: 1px solid grey;
     margin-top: 10px;
+    font-weight: bold;
 }
 .input input[type="submit"]:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: black;
-}
-input:focus {
-    outline: none;
+    background-color: #1b83f3;
+    color: rgb(239, 239, 239);
 }
 .row.main.footer {
     display: flex;
@@ -88,6 +88,7 @@ input:focus {
     border: 1px solid rgb(128, 128, 128);
     cursor: pointer;
 }
+
 .password-container {
     display: flex;
     align-items: center;

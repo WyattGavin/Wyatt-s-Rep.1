@@ -54,17 +54,18 @@ input:focus {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: transparent;
-    color: #000000;
+    background-color: #007BFF;
+    color: #ffffff;
     font-size: 16px;
     cursor: pointer;
     box-sizing: border-box;
     border: 1px solid grey;
     margin-top: 10px;
+    font-weight: bold;
 }
 .input input[type="submit"]:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: black;
+    background-color: #1b83f3;
+    color: rgb(239, 239, 239);
 }
 .row.main.footer {
     display: flex;

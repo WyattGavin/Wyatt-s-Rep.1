@@ -40,22 +40,13 @@
                     </nav>
                 </div>
                 <div class="column header third">
-                    <button class="header signup_btn" onclick="pushToSignup()">signup</button>
-                    <button class="header login_btn" onclick="pushToLogin()">login</button>
+                    <button class="header signout_btn" id="signoutBtn">signout</button>
                     <ul class="un-ordered_hamburger-list" id="hamburger-menu-btn">
                         <li class="hamburger"></li>
                         <li class="hamburger"></li>
                         <li class="hamburger"></li>
                     </ul>
                 </div>
-                <script>
-                    function pushToSignup() {
-                        window.location.href = "/html/signup.html";
-                    }
-                    function pushToLogin() {
-                        window.location.href = "/html/login.html";
-                    }
-                </script>
             </div>
         </div>
     </header>
@@ -86,5 +77,5 @@
         </div>
     </div>
 </body>
-<script type="module" src="/js/index.js/main-firebase.js"></script>
+<script type="module" src="/js/home/home.js"></script>
 </html>

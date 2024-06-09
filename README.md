@@ -14,5 +14,4 @@ this design includes a responsive layout of the following
 definetly a good starter and basic demo of how websites should be formatted
 
 <h3>updates</h3>
-
 currently working on the overall style and layout of the basic website design

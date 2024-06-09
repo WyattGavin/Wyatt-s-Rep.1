@@ -17,7 +17,7 @@
         main {
             display: flex;
             justify-content: center;
-            margin-top: 12.5%;
+            margin-top: 10%;
         }
     </style>
 </head>
@@ -40,7 +40,7 @@
                     }
                 </script>
             </div>
-            <div class="row main body">
+            <form class="row main body" id="loginForm">
                 <div class="column main input email">
                     <h4 class="pre-input-placeholder email_brand">Email</h4>
                     <input type="text" placeholder="Enter your Email" name="email" id="email_input">
@@ -64,7 +64,7 @@
                 <div class="column main input submit">
                     <input id="login_btn" name="submit" type="submit" value="Login">
                 </div>
-            </div>
+            </form>
             <div class="row main footer">
                 <div class="column main desc">
                     <a class="forgot_password">forgot password?</a>
@@ -77,4 +77,5 @@
     </main>
 </body>
 <script src="/js/login/input-color-functionality-login.js"></script>
+<script type="module" src="/js/login/login-firebase.js"></script>
 </html>
