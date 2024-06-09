@@ -14,6 +14,5 @@ this design includes a responsive layout of the following
 definetly a good starter and basic demo of how websites should be formatted
 
 <h3>updates</h3>
-basic: basic layout nothing fancy needs work done to it <br>
-styled: some styling has been added but nothing crazy and not a lot of script was needed <br>
-scripted: scripted functionality of some sectors
+
+currently working on the overall style and layout of the basic website design
