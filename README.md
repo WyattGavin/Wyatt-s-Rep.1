@@ -15,3 +15,5 @@ definetly a good starter and basic demo of how websites should be formatted
 
 <h3>updates</h3>
 currently working on the overall style and layout of the basic website design
+
+jun 9th sunday 2024 -- added firebase and users who make an account can go to home.html
