@@ -70,6 +70,7 @@
 .list-item-scale:hover {
     transform: scale(1.1);
 }
+.header.signout_btn,
 .header.signup_btn,
 .header.login_btn {
     background-color: transparent;
@@ -81,12 +82,14 @@
     user-select: none;
     -webkit-user-select: none;
 }
+.header.signout_btn:hover,
 .header.signup_btn:hover,
 .header.login_btn:hover {
     background-color: rgba(255, 255, 255, 0.25);
     color: black;
     cursor: pointer;
 }
+.header.signout_btn:active
 .header.signup_btn:active,
 .header.login_btn:active {
     background-color: rgba(90, 89, 89, 0.543);
