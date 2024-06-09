@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     background-color: #010409;
-    border-bottom: 1px solid  rgba(128, 128, 128, 0.5);
+    border-bottom: .5px solid  rgba(128, 128, 128, 0.5);
 }
 .row.header {
     width: 80%;
@@ -13,7 +13,7 @@
     justify-content: space-between;
 }
 .website_brand_header {
-    background: linear-gradient(to left, rgb(38, 38, 185), rgb(21, 21, 68), rgb(16, 28, 69), rgb(41, 41, 197));
+    background: linear-gradient(to left, white, rgb(168, 168, 168), white);
     background-clip: text;
     color: transparent;
     animation: animatedbrand 5s linear infinite;
@@ -34,14 +34,12 @@
 .column.header.third {
     display: flex;
     justify-content: end;
-    margin: 0px 0px 0px 40px;
+    margin: 0px 0px 0px 70px;
 }
 .list-items {
     display: flex;
     list-style: none;
     padding: 0;
-    border: 1px solid rgb(255, 255, 255);
-    padding: 10px;
     border-radius: 10px;
     transition: transform 0.4s ease;
     user-select: none;
@@ -57,13 +55,18 @@
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px; 
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;    
 }
 .list-item:hover {
     background-color: rgba(255, 255, 255, 0.08); 
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1); 
 }
-
+.list-items:hover > :not(:hover) {
+    opacity: 0.4;
+}
+.list-item-scale {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 .list-item-scale:hover {
     transform: scale(1.1);
 }
@@ -73,7 +76,7 @@
     border: 1px solid grey;
     border-radius: 5px;
     color: white;
-    padding: 10px 20px 10px 20px;
+    padding: 5px 15px 5px 15px;
     font-size: 24px;
     user-select: none;
     -webkit-user-select: none;
@@ -82,6 +85,7 @@
 .header.login_btn:hover {
     background-color: rgba(255, 255, 255, 0.25);
     color: black;
+    cursor: pointer;
 }
 .header.signup_btn:active,
 .header.login_btn:active {

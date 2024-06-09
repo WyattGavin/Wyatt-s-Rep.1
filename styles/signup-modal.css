@@ -1,53 +1,61 @@
 .container.main.modal {
-    width: 500px;
-    height: 520px;
-    background-color: #010409;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    padding: 20px;
+    width: 600px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 11px 34px 0 rgba(0, 0, 0, .2);
 }
 .row.main.header {
     padding: 10px;
-    background-color: #949ca69f;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
     display: flex;
     justify-content: space-between;
 }
 .main_header_brand {
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0;
 }
 .row.main.body {
     padding: 20px;
 }
 .pre-input-placeholder {
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0px 0px 10px 0px;
     font-size: 22px;
 }
 .input input[type="text"],
 .input input[type="password"] {
     margin-bottom: 10px;
-    width: 100%;
-    padding: 10px;
-    border: none;
+    width: 80%;
+    padding: 15px 10px 15px 10px;
+    border: 1px solid grey;
     border-radius: 5px;
-    background-color: #0d1117;
-    color: #ffffff;
-    font-size: 16px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 13px;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 .input input[type="text"]::placeholder,
 .input input[type="password"]::placeholder {
     color: #aaaaaa;
+    font-size: 15px;
+    font-weight: 200;
+    transition: font-size 0.5s ease;
+}
+.input input[type="text"]:focus::placeholder,
+.input input[type="password"]:focus::placeholder {
+    font-size: 13px;
+}
+input:focus {
+    outline: none;
 }
 .input input[type="submit"] {
-    width: 100%;
+    width: 25%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
     cursor: pointer;
     box-sizing: border-box;
@@ -66,7 +74,7 @@
 }
 .forgot_password,
 .signup_push {
-    color: white;
+    color: rgb(0, 0, 0);
     margin: 0px 0px 0px 0px;
     font-weight: bold;
     padding: 5px;
@@ -78,4 +86,18 @@
 .signup_push:hover {
     border: 1px solid rgb(128, 128, 128);
     cursor: pointer;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    cursor: pointer;
+}
+.toggle-password {
+    margin-left: 410px;
+    margin-bottom: 8px;
 }

@@ -6,16 +6,18 @@
     <title>login file</title>
     <link rel="stylesheet" href="/styles/login-modal.css">
     <link rel="stylesheet" href="/styles/escape-btn.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #0d1117;
+            background-color: #ffffff;
         }
         main {
             display: flex;
             justify-content: center;
-            margin-top: 10%;
+            margin-top: 12.5%;
         }
     </style>
 </head>
@@ -41,12 +43,24 @@
             <div class="row main body">
                 <div class="column main input email">
                     <h4 class="pre-input-placeholder email_brand">Email</h4>
-                    <input type="text" placeholder="email" name="email">
+                    <input type="text" placeholder="Enter your Email" name="email" id="email_input">
                 </div>
                 <div class="colum main input password">
                     <h4 class="pre-input-placeholder password_brand">Password</h4>
-                    <input type="password" placeholder="password" name="password">
+                    <div class="password-container">
+                        <input id="password_input" type="password" placeholder="Enter your Password" name="password">
+                        <span class="material-icons toggle-password" onclick="togglePassword()">visibility_off</span>
+                    </div>
                 </div>
+                <script>
+                    function togglePassword() {
+                        const passwordInput = document.getElementById('password_input');
+                        const togglePasswordIcon = document.querySelector('.toggle-password');
+                        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                        passwordInput.setAttribute('type', type);
+                        togglePasswordIcon.textContent = type === 'password' ? 'visibility_off' : 'visibility';
+                    }            
+                </script>
                 <div class="column main input submit">
                     <input id="login_btn" name="submit" type="submit" value="Login">
                 </div>
@@ -62,4 +76,36 @@
         </div>
     </main>
 </body>
+<script>
+        const emailInput = document.getElementById("email_input");
+        const passwordInput = document.getElementById("password_input");
+
+        function validateEmail(input) {
+            if (input.value === "") {
+                input.style.border = '';
+            } else {
+                const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+                input.style.border = isValidEmail ? '1px solid green' : '1px solid red';
+            }
+        }
+
+        function validatePassword(input) {
+            if (input.value === "") {
+                input.style.border = '';
+            } else {
+                const isValidPassword = input.value.length >= 6;
+                input.style.border = isValidPassword ? '1px solid green' : '1px solid red';
+            }
+        }
+
+        if (emailInput && passwordInput) {
+            emailInput.addEventListener("input", function() {
+                validateEmail(emailInput);
+            });
+
+            passwordInput.addEventListener("input", function() {
+                validatePassword(passwordInput);
+            });
+        }
+</script>
 </html>
