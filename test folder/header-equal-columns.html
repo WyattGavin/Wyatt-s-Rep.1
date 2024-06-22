@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Sora", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+            font-weight: 500;
+            letter-spacing: .05em;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        .main_img {
+            width: 150px;
+        }
+        .main_background_img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgb(96, 96, 96);
+            background-color: #000000; 
+        }
+        .container.header {
+            width: 95%;
+            background-color: #000000;
+        }
+        .row.header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .column.header {
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .column.header.three {
+            display: flex;
+            justify-content: end;
+        }
+        .web.brand {
+            margin: 0;
+            font-size: 40px;
+        }
+        .nav.items {
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .nav.link.one {
+            border-bottom: 2px solid white;
+        }
+        .nav.item {
+            list-style-type: none;
+            margin: 0 20px;
+        }
+        .nav.link {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 17px;
+            padding: 0px 10px 10px 10px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-bottom: 2px solid rgba(255, 255, 255, 0);
+        }
+        .nav.link:hover {
+            color: #a8a8a8;
+            border-bottom: 2px solid white;
+        }
+        .profile_btn {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .profile_btn:hover {
+            background-color: #ffffffe4;
+        }
+        .container.main.story {
+            display: flex;
+            justify-content: center;
+            margin-top: -400px;
+            position: relative;
+        }
+        .row.main.story {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            width: 90%;
+            height: 500px;
+            border-radius: 20px;
+            background-color: #333333;
+            box-shadow: 0px 0px 20px rgba(106, 106, 106, 0.558);
+            transition: transform 0.3s ease;
+        }
+        .row.main.story:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+        .column.main.topstory.first {
+            overflow: hidden;
+            position: relative;
+        }
+        .column.main.topstory {
+            width: 50%;
+        }
+        .column.main.topstory.second {
+            padding: 0px 20px;
+        }
+        .container.exclusive.main.story {
+            color: white;
+        }
+        .container.exclusive_main.story {
+            margin-left: 96px;
+            margin-top: 50px;
+        }
+        .container.exclusive_section.stories {
+            display: flex;
+            justify-content: center;
+        }
+        .row.exclusive_section.stories {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin-top: 45px;
+        }
+        .column.exclusive_section.stories {
+            width: 22.5%;
+            color: white;
+            background-color: #333333;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 0px 20px rgba(172, 172, 172, 0.558);
+            position: relative;
+        }
+        .column.exclusive_section.stories:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+        .exclusive_imgs {
+            width: 500px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .exclusive_life_btn {
+            position: absolute;
+            top: 2%;
+            right: 2%;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            font-weight: 300;
+        }
+        .exclusive_life_btn.first {
+            background-color: #050657;
+        }
+        .exclusive_life_btn.second {
+            background-color: #175705;
+        }
+        .exclusive_life_btn.third {
+            background-color: #785a08;
+        }
+        .exclusive_life_btn.fourth {
+            background-color: #570505;
+        }
+        .exclusive_auth_container_comment {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgb(168, 168, 168);
+        }
+        .material-symbols-outlined {
+            padding: 10px;
+        }
+        @media (max-width: 1355px) {
+            .column.header.two {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="container header">
+            <div class="row header">
+                <div id="column_one_header" class="column header one">
+                    <img class="main_img" src="/imgs/Crazed-Logo-03-1.png" alt="">
+                </div>
+                <div class="column header two">
+                    <nav class="nav header">
+                        <ul class="nav items">
+                            <li class="nav item"><a class="nav link one" href="">All</a></li>
+                            <li class="nav item"><a class="nav link" href="">Culture</a></li>
+                            <li class="nav item"><a class="nav link" href="">Movies & TV</a></li>
+                            <li class="nav item"><a class="nav link" href="">Nature</a></li>
+                            <li class="nav item"><a class="nav link" href="">Life</a></li>
+                            <li class="nav item"><a class="nav link" href="">Travel</a></li>
+                            <li class="nav item"><a class="nav link" href="">Crime</a></li>
+                            <li class="nav item"><a class="nav link" href="">Trending</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="column_three_header" class="column header three">
+                    <button id="profileBtn" class="profile_btn">Subscribe</button>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="container main">
+            <div class="row main">
+                <div class="column main">
+                    <div class="img_main_background_container">
+                        <img class="main_background_img" src="/imgs/news_header.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container main story">
+            <div class="row main story">
+                <div class="column main topstory first">
+                    <img class="story_img one" src="/imgs/maxresdefault.jpg" alt="">
+                </div>
+                <div class="column main topstory second">
+                    <section class="container top_story" style="color: #a8a8a8;">
+                        <p><a href="" style="color: rgb(196, 196, 196);">Wyatt G.</a> June 12th 2024</p>
+                        <h2 style="color: white; font-size: 32px; margin: 0;">Top story this is where you put the header for your story</h2>
+                        <p style="font-size: 19px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloribus, illum exercitationem ducimus optio aperiam recusandae maxime illo repudiandae quisquam temporibus ipsa aliquid, repellendus aspernatur reprehenderit impedit quasi est a.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="container exclusive_main story">
+            <h2 style="color: white; font-size: 30px; margin: 0; font-weight: 300;">Exclusives Stories</h2>
+        </section>
+        <section class="container exclusive_section stories">
+            <div class="row exclusive_section stories">
+                <div class="column exclusive_section stories first">
+                    <img class="exclusive_imgs" src="/imgs/1J6A9277_Web.jpg" alt="">
+                    <button class="exclusive_life_btn first">Life</button>
+                    <h4 style="margin: 0; padding: 10px 10px 0px 10px; font-size: 20px; font-weight: 500;">Top 10 Amazing Family Activities To Do For Earth Day.</h4>
+                    <div class="exclusive_auth_container_comment">
+                        <p style="margin: 0; padding: 10px 10px 10px 10px; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                        <div style="display: flex; align-items: center;">
+                            <span class="material-symbols-outlined">forum</span>
+                            <p style="margin: none; padding-right: 10px;">0</p>
+                        </div>
+                    </div> 
+                    <p style="margin: 0; padding: 0px 10px 20px 10px; color: rgb(168, 168, 168);">5 hours ago</p>
+                </div>
+                <div class="column exclusive_section stories second">
+                    <img class="exclusive_imgs" src="/imgs/crime_img.jpeg" alt="">
+                    <button class="exclusive_life_btn second">Crime</button>
+                    <h4 style="margin: 0; padding: 10px 10px 0px 10px; font-size: 20px; font-weight: 500;">Top 10 Crimes Committed During Earth Day 2024.</h4>
+                    <div class="exclusive_auth_container_comment">
+                        <p style="margin: 0; padding: 10px 10px 10px 10px; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                        <div style="display: flex; align-items: center;">
+                            <span class="material-symbols-outlined">forum</span>
+                            <p style="margin: none; padding-right: 10px;">0</p>
+                        </div>
+                    </div> 
+                    <p style="margin: 0; padding: 0px 10px 20px 10px; color: rgb(168, 168, 168);">5 hours ago</p>
+              </div>
+                <div class="column exclusive_section stories thrid">
+                    <img class="exclusive_imgs" src="/imgs/travel_img.jpeg" alt="">
+                    <button class="exclusive_life_btn third">Travel</button>
+                    <h4 style="margin: 0; padding: 10px 10px 0px 10px; font-size: 20px; font-weight: 500;">Top 10 Places To Travel To For Earth Day.</h4>
+                    <div class="exclusive_auth_container_comment">
+                        <p style="margin: 0; padding: 10px 10px 10px 10px; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                        <div style="display: flex; align-items: center;">
+                            <span class="material-symbols-outlined">forum</span>
+                            <p style="margin: none; padding-right: 10px;">0</p>
+                        </div>
+                    </div> 
+                    <p style="margin: 0; padding: 0px 10px 20px 10px; color: rgb(168, 168, 168);">5 hours ago</p>
+               </div>
+                <div class="column exclusive_section stories fourth">
+                    <img class="exclusive_imgs" src="/imgs/nature_img.jpeg" alt="">
+                    <button class="exclusive_life_btn fourth">Nature</button>
+                    <h4 style="margin: 0; padding: 10px 10px 0px 10px; font-size: 20px; font-weight: 500;">Top 10 Destinations To Get You Excited For Earth Day.</h4>
+                    <div class="exclusive_auth_container_comment">
+                        <p style="margin: 0; padding: 10px 10px 10px 10px; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                        <div style="display: flex; align-items: center;">
+                            <span class="material-symbols-outlined">forum</span>
+                            <p style="margin: none; padding-right: 10px;">0</p>
+                        </div>
+                    </div>
+                    <p style="margin: 0; padding: 0px 10px 20px 10px; color: rgb(168, 168, 168);">5 hours ago</p>
+                </div>
+            </div>
+        </section>
+        <style>
+            .container.latest_section.story {
+                margin-left: 96px;
+                margin-top: 50px;
+            }
+            .container.latest_section.stories {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .row.latest_section.stories {
+                height: 660px;
+                width: 90%;
+                margin-top: 45px;
+                display: flex;
+            }
+            .column.latest_section.stories {
+                width: 60%;
+            }
+            .column.latest_section.stories.first {
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            .column.latest_section.stories.first:hover {
+                cursor: pointer;
+                transform: scale(1.01);
+            }
+            .column.latest_section.stories.second {
+                display: flex;
+                flex-direction: column;
+                height: 100%; 
+                width: 40%;
+            }
+            .latest_story_img {
+                width: 1000px;
+                height: 500px;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+            .text-container {
+                position: relative;
+                height: 60px;
+                overflow: hidden;
+            }
+            .text-container::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 98%;
+                height: 50px;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+            }
+            .row.side_latest.story {
+                background-color: #505050;
+                width: 100%;
+                height: 25%;
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px;
+            }
+            .column.side_latest.first {
+                padding: 20px;
+            }
+            .side_latest.story {
+                background-color: #505050;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                padding: 10px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .side_latest.story:hover {
+                transform: scale(1.02);
+                cursor: pointer;
+            }
+            .latest_side_img {
+                width: 120px;
+                height: 120px;
+                object-fit: cover;
+                border-radius: 10px;
+                margin-right: 15px;
+            }
+        </style>
+        <section class="container latest_section story">
+            <h2 style="color: white; font-size: 30px; margin: 0; font-weight: 300;">Latest Stories</h2>
+        </section>
+        <section class="container latest_section stories">
+            <div class="row latest_section stories">
+                <div class="column latest_section stories first">
+                    <img class="latest_story_img" src="/imgs/nature_img.jpeg" alt="">
+                    <p style="color: rgb(196, 196, 196); font-weight: 300; font-size: 18px;"><a href="" style="color: rgb(196, 196, 196);">Wyatt G.</a> June 12th 2024</p>
+                    <h3 style="color: white; font-weight: 600; font-size: 38px; margin: 0;">The Latest Story Headline Goes Here</h3>
+                    <div class="text-container">
+                        <p style="color: rgb(196, 196, 196);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam optio error odio. Itaque quidem assumenda accusamus quo ipsum qui quae cupiditate, a iure nisi, quibusdam delectus? Fugiat dolores accusamus beatae. Lorem ipsum dolor sit, <br> amet consectetur adipisicing elit. Non, possimus velit. Delectus officiis dolorum, asperiores minima unde sunt quae vel, deserunt itaque nemo, harum autem nostrum accusantium blanditiis reprehenderit quos!</p>
+                    </div>
+                </div>
+                <div class="column latest_section stories second">
+                    <div class="row side_latest story first">
+                        <div class="column side_latest first">
+                            <h4 style="color: white; margin: 0; font-size: 24px;">This Is a latest Story Title</h4>
+                            <div class="exclusive_auth_container_comment">
+                                <p style="margin: 0; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                                <div style="display: flex; align-items: center;">
+                                    <span class="material-symbols-outlined">forum</span>
+                                    <p style="margin: none;">0</p>
+                                </div>
+                            </div>
+                            <p style="margin: 0; color: rgb(168, 168, 168);">5 hours ago</p>
+                        </div>
+                        <div class="column side_latest second">
+                            <img class="latest_side_img" src="/imgs/crime_img.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="row side_latest story second">
+                        <div class="column side_latest first">
+                            <h4 style="color: white; margin: 0; font-size: 24px;">This Is a latest Story Title</h4>
+                            <div class="exclusive_auth_container_comment">
+                                <p style="margin: 0; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                                <div style="display: flex; align-items: center;">
+                                    <span class="material-symbols-outlined">forum</span>
+                                    <p style="margin: none;">0</p>
+                                </div>
+                            </div>
+                            <p style="margin: 0; color: rgb(168, 168, 168);">5 hours ago</p>
+                        </div>
+                        <div class="column side_latest second">
+                            <img class="latest_side_img" src="/imgs/news_header.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row side_latest story third">
+                        <div class="column side_latest first">
+                            <h4 style="color: white; margin: 0; font-size: 24px;">This Is a latest Story Title</h4>
+                            <div class="exclusive_auth_container_comment">
+                                <p style="margin: 0; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                                <div style="display: flex; align-items: center;">
+                                    <span class="material-symbols-outlined">forum</span>
+                                    <p style="margin: none;">0</p>
+                                </div>
+                            </div>
+                            <p style="margin: 0; color: rgb(168, 168, 168);">5 hours ago</p>
+                        </div>
+                        <div class="column side_latest second">
+                            <img class="latest_side_img" src="/imgs/travel_img.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="row side_latest story fourth">
+                        <div class="column side_latest first">
+                            <h4 style="color: white; margin: 0; font-size: 24px;">This Is a latest Story Title</h4>
+                            <div class="exclusive_auth_container_comment">
+                                <p style="margin: 0; color: rgb(168, 168, 168);">By Wyatt Gavin,</p>
+                                <div style="display: flex; align-items: center;">
+                                    <span class="material-symbols-outlined">forum</span>
+                                    <p style="margin: none;">0</p>
+                                </div>
+                            </div>
+                            <p style="margin: 0; color: rgb(168, 168, 168);">5 hours ago</p>
+                        </div>
+                        <div class="column side_latest second">
+                            <img class="latest_side_img" src="/imgs/JT-CD1681-BLACK_1400x.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1>cwece</h1>
+        <h1>cwecwec</h1>
+    </main>
+    <script>
+        function matchHeaderColumns() {
+            const columnOne = document.getElementById("column_one_header");
+            const columnThree = document.getElementById("column_three_header");
+
+            const widthOne = columnOne.offsetWidth;
+            const heightOne = columnOne.offsetHeight;
+            const widthThree = columnThree.offsetWidth;
+            const heightThree = columnThree.offsetHeight;
+
+            const largerWidth = Math.max(widthOne, widthThree);
+            const largerHeight = Math.max(heightOne, heightThree);
+
+            columnOne.style.width = largerWidth + 'px';
+            columnOne.style.height = largerHeight + 'px';
+            columnThree.style.width = largerWidth + 'px';
+            columnThree.style.height = largerHeight + 'px';
+        }
+
+        window.onload = matchHeaderColumns;
+
+        const columns = document.querySelectorAll('.column.exclusive_section.stories');
+
+        columns.forEach(column => {
+            column.addEventListener('mouseover', () => {
+                columns.forEach(sibling => {
+                    if (sibling !== column) {
+                        sibling.style.opacity = '0.5';
+                    }
+                });
+            });
+
+            column.addEventListener('mouseout', () => {
+                columns.forEach(sibling => {
+                    sibling.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

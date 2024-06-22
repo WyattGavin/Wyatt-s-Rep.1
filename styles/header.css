@@ -34,7 +34,6 @@
 .column.header.third {
     display: flex;
     justify-content: end;
-    margin: 0px 0px 0px 70px;
 }
 .list-items {
     display: flex;

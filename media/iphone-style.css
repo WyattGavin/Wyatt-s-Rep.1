@@ -3,7 +3,8 @@
         display: none;
     }
     .header.signup_btn,
-    .header.login_btn {
+    .header.login_btn,
+    .header.signout_btn {
         display: none;
     }
     .un-ordered_hamburger-list {
